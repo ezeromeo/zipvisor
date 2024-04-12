@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZipVisor</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="container my-4 d-flex align-items-center justify-content-center flex-column">
+    <div class="titulo pb-5 d-flex align-items-center justify-content-center">
+      <a href="">
+        <img src="assets/img/favicon.ico" alt="">
+      </a>
+      <h1 class="ms-3">ZipVisor</h1>
+    </div>  
+    <div id="dragArea" class="drag-area d-flex justify-content-center align-items-center mb-3">
+        <p id="fileMessage">Arrastra aquí tu archivo ZIP o haz clic para seleccionarlo</p>
+        <input type="file" id="zipFileInput" accept=".zip" hidden>
+    </div>
+    <div class="spinner-border text-primary mt-5" role="status" id="spinner" style="display: none;">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <table class="table tableContainer table-borderless table-hover mt-4 mb-4 d-flex d-none">
+      <thead>
+        <tr>
+          <th scope="col">Archivos</th>
+        </tr>
+      </thead>
+      <tbody id="pdfListContainer">
+      </tbody>
+    </table>
+    <div class="instructions">
+      <h2>Cómo Utilizar ZipVisor</h2>
+      <p><strong>Selecciona tu Archivo:</strong> Haz clic en el área o arrastra tu archivo ZIP para comenzar.</p>
+      <p><strong>Visualiza tu Contenido:</strong> Espera a que carguemos el contenido. Verás una lista de los archivos.</p>
+      <p><strong>Explora tus Archivos:</strong> Puedes ver los nombres de los archivos, pero no abrirlos directamente.</p>
+      <p class="note"><strong>Nota:</strong> No almacenamos tus archivos. La visualización es segura y local.</p>
+    </div>
+</div>
+<footer class="site-footer d-flex align-items-center justify-content-center">
+  <p>Powered by <a href="">ER</a></p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
